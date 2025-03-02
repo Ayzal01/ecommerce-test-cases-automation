@@ -1,0 +1,114 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "ecomerce-checkout-functionality;verify-login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Verify Login with valid credentials",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User is on E commerce website's login page.",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User entered valid user id \"anshika@gmail.com\" and \"Iamking@000\"",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "User should be logon and redirect to dashboard page.",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 2
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "ecomerce-checkout-functionality;verify-add-to-cart-functionality",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Verify add to cart functionality",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "User is logged in",
+            "match": {
+              "location": "features\\step-definitions\\loginstep-definitions.js:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 889799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "user selected few items from dashboard and hit on addtocart button",
+            "match": {
+              "location": "features\\step-definitions\\loginstep-definitions.js:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2666776199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "user should see counter on add to cart button items should be added to the cart.",
+            "match": {
+              "location": "features\\step-definitions\\loginstep-definitions.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 396600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@addtocart",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "ecomerce-checkout-functionality",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "eComerce Checkout Functionality",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]

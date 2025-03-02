@@ -1,0 +1,8 @@
+my conuntry list 9
+ | 67ad5245c019fb1ad6f617fd | 
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 23386,
+  [Symbol(trigger_async_id_symbol)]: 21805,
+  [Symbol(kResourceStore)]: undefined
+}

@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","25031","Add to cart, Checkout, and verify order summary","chromium","Fri Feb 14 12:31:11 NZDT 2025","passed","Fri Feb 14 12:31:36 NZDT 2025","","login.spec.js","",""
+"","37490","End to End eshop test case","chromium","Thu Feb 13 19:01:08 NZDT 2025","passed","Thu Feb 13 19:01:45 NZDT 2025","","login.spec.js","",""
+"","5692","UI Basics","chromium","Fri Feb 14 18:34:16 NZDT 2025","passed","Fri Feb 14 18:34:22 NZDT 2025","","uIBasic.spec.js","",""
+"","11901","Checkout the items Testcase","chromium","Mon Feb 10 00:30:16 NZDT 2025","failed","Mon Feb 10 00:30:27 NZDT 2025","","login.spec.js","",""
+"","23787","Add To Cart Test Case","chromium","Thu Feb 13 13:30:18 NZDT 2025","passed","Thu Feb 13 13:30:41 NZDT 2025","","login.spec.js","",""
+"","34199","End To End eshop Test Case","chromium","Fri Feb 14 10:10:50 NZDT 2025","passed","Fri Feb 14 10:11:25 NZDT 2025","","login.spec.js","",""
