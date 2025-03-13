@@ -31,8 +31,7 @@ test("Add to cart, Checkout, and verify order summary", async ({ page }) => {
     console.log(OrderTransactionId);
 
     // Orders, order history page
-    const orderno = new Orders(page)
-    await page.pause();
+    const orderno = new Orders(page);
     await orderno.gotoorderHistorypage(OrderTransactionId);
 
     // Verify Ordersummary

@@ -17,7 +17,7 @@ test("UI Basics", async ({ page }) => {
 }, 20000);
 
 
-test.only("Handling child windows not implemented POM for this test case", async ({ browser }) => {
+test("Handling child windows not implemented POM for this test case", async ({ browser }) => {
 
     const context = await browser.newContext();
     const page = await context.newPage();
@@ -36,7 +36,7 @@ test.only("Handling child windows not implemented POM for this test case", async
     const domain = arrayText[1].split(" ")[0];
     console.log("My Id is", domain);
     await page.locator("#username").fill(domain)
-    await page.pause();
+ 
 
 
 
