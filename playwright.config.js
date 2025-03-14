@@ -2,12 +2,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
+ * Log to confirm that the configuration file is being loaded
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+console.log('Playwright Config Loaded');
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -40,7 +37,7 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'DemoProjectPlayWright',  // Custom project name as per your request
+      name: 'DEMOPROJECTPLAYWRIGHT',  // Custom project name as per your request
       use: { ...devices['Desktop Chrome'] }, // Adjust the device as needed
     },
     {
