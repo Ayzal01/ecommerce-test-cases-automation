@@ -1,7 +1,16 @@
-
-# Playwright
+# Node dependencies
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+
+# Playwright reports & results
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Ignore Allure report and result files
+allure-report/
+allure-results/
+
+# Playwright default traces & debugging artifacts
+trace.zip
+playwright/.cache/
