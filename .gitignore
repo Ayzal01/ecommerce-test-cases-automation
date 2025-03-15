@@ -1,16 +1,17 @@
-# Node dependencies
-node_modules/
-
-# Playwright reports & results
-test-results/
+# Playwright-related
 playwright-report/
+test-results/
 blob-report/
 playwright/.cache/
 
-# Ignore Allure report and result files
+# Allure reports
 allure-report/
 allure-results/
 
-# Playwright default traces & debugging artifacts
-trace.zip
-playwright/.cache/
+# Node modules
+node_modules/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log

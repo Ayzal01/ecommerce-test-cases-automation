@@ -1,10 +1,11 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import allurePlaywright from 'allure-playwright';  // Import Allure reporter
 
 /**
  * Log to confirm that the configuration file is being loaded
  */
-console.log('Playwright Config Loaded');
+
 
 /**
  * @see https://playwright.dev/docs/test-configuration
@@ -42,7 +43,7 @@ export default defineConfig({
     },
     {
       name: 'chromium',  // Chromium configuration
-      use: { ...devices['Desktop Chrome'] }, 
+      use: { ...devices['Desktop Chrome'] },
     },
     {
       name: 'firefox',  // Firefox configuration

@@ -2,58 +2,22 @@ pipeline {
     agent any
 
     environment {
-        NODEJS_VERSION = '18.17.1' // Set desired Node.js version
+        ALLURE_RESULTS_DIR = 'allure-results'
+        ALLURE_REPORT_DIR = 'allure-report'
     }
 
     stages {
-        stage('Prepare System') {
+        stage('Checkout') {
             steps {
-                script {
-                    // Install Node.js if not available
-                    bat '''
-                    where node || (
-                        echo Installing Node.js...
-                        choco install nodejs-lts -y
-                    )
-                    '''
-
-                    // Install Allure if not available
-                    bat '''
-                    where allure || (
-                        echo Installing Allure...
-                        npm install -g allure-commandline
-                    )
-                    '''
-                }
-            }
-        }
-
-        stage('Clone Repository') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Ayzal01/ecommerce-test-cases-automation.git'
-            }
-        }
-
-        stage('Setup Playwright Project') {
-            steps {
-                script {
-                    bat '''
-                    if not exist package.json (
-                        echo Initializing new Playwright project...
-                        npm init -y
-                        npm install -D playwright
-                        npx playwright install
-                    )
-                    '''
-                }
+                checkout scm
             }
         }
 
         stage('Install Dependencies') {
             steps {
                 script {
-                    bat 'npm install'
-                    bat 'npx playwright install'
+                    sh 'npm install'  // Install dependencies
+                    sh 'npx playwright install'  // Install Playwright browsers
                 }
             }
         }
@@ -61,7 +25,7 @@ pipeline {
         stage('Run Playwright Tests') {
             steps {
                 script {
-                    bat 'npx playwright test ./tests --headed --project=DEMOPROJECTPLAYWRIGHT --workers=1'
+                    sh 'npx playwright test'  // Run the Playwright tests
                 }
             }
         }
@@ -69,7 +33,7 @@ pipeline {
         stage('Generate Allure Report') {
             steps {
                 script {
-                    bat 'npx allure generate allure-results --clean -o allure-report'
+                    sh 'npx allure generate allure-results --clean -o allure-report'  // Generate Allure report
                 }
             }
         }
@@ -77,12 +41,10 @@ pipeline {
         stage('Publish Allure Report') {
             steps {
                 publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
+                    reportName: 'Allure Report',
                     reportDir: 'allure-report',
                     reportFiles: 'index.html',
-                    reportName: 'Allure Report'
+                    keepAll: true
                 ])
             }
         }
